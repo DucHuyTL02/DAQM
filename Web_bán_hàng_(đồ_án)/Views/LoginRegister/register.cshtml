@@ -1,0 +1,84 @@
+﻿
+
+
+
+@{
+    ViewBag.Title = "register";
+
+    Layout = "~/Views/Shared/_LayoutLoginRegister.cshtml";
+}
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+<link href="~/Content/mystyle/StyleRegister.css" rel="stylesheet" />
+<!DOCTYPE HTML>
+<head lang="vi">
+    <meta name="description" content="Tài Khoản Đăng Nhập" />
+    <meta charset="utf-8" />
+    <title>Đăng nhập/Đăng kí</title>
+</head>
+<body>
+    <div id="TrangRegister">
+        <div id="Register">
+            <h1>Đăng Kí</h1>
+            <div>
+                <form id="form">
+                    <div id="Form-01">
+                        <div class="Form-1">
+                            <label for="name">Họ</label>
+                            <br />
+                            <input type="text" name="Họ" placeholder="Nhập Họ" />
+                        </div>
+                        <div class="Form-1">
+                            <label for="name">Tên</label>
+                            <br />
+                            <input type="text" name="Họ" placeholder="Nhập Tên" />
+                        </div>
+
+                    </div>
+                    <div id="Form-02" style="width:100%">
+                        <div class="Form-2" style="width:60%">
+                            <i class="fas fa-envelope"></i>
+                            <label for="name" class="description">Gmail</label><br />
+                            <input type="email" name="Nhập tên đăng nhập5 placeholder="VD:abc@gmail.com..." class="input-box" /><br />
+                        </div>
+                        <div class="Form-2" style="width:40%">
+                            <i class="fas fa-sms"></i>
+                            <label for="name" class="description">Số điện thoại</label><br />
+                            <input type="number" name="Nhập tên đăng nhập" placeholder="VD:0988888...." class="input-box" /><br />
+                        </div>
+
+                    </div>
+                    <div class="Trangchinh">
+                        <i class="fas fa-user"></i>
+                        <label for="name" class="description">Tên đăng nhập</label><br />
+                        <input type="text" name="Nhập tên đăng nhập" placeholder="Nhập tên tài khoản" class="input-box" style="border:none" /><br />
+                    </div>
+                    <div class="Trangchinh">
+                        <i class="fas fa-lock"></i>
+                        <label for="password" class="description">Mật khẩu</label><br />
+                        <input type="password" name="Mật khẩu" placeholder="Nhập mật khẩu" class="input-box" style="border:0px solid white" /><br />
+                    </div>
+                    <div class="Trangchinh">
+                        <i class="fas fa-lock"></i>
+                        <label for="password" class="description">Xác thực mật khẩu</label><br />
+                        <input type="password" name="Mật khẩu" placeholder="Xác thực mật khẩu" class="input-box" /><br />
+                    </div>
+                    <div id="remember">
+                        <label><input type="checkbox" />Nhớ mật khẩu</label>
+                    </div>
+                    <button type="submit" id="btn-register">Đăng kí</button>
+                    <div class="input">
+                        <label for="register">Bạn đã tài khoản?</label>
+                        <a style="color:red" ; href="~/Giohang/Login">Đăng nhập</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+
+
