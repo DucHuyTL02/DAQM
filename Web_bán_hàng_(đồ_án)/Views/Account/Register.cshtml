@@ -1,0 +1,81 @@
+﻿@model Web_bán_hàng__đồ_án_.Models.RegisterViewModel
+
+
+
+@{
+    ViewBag.Title = "register";
+
+    Layout = "~/Views/Shared/_LayoutWeb.cshtml";
+}
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+<link href="~/Content/mystyle/StyleRegister.css" rel="stylesheet" />
+<!DOCTYPE HTML>
+<head lang="vi">
+    <meta name="description" content="Tài Khoản Đăng Nhập" />
+    <meta charset="utf-8" />
+    <title>Đăng nhập/Đăng kí</title>
+</head>
+<body>
+    <div id="TrangRegister">
+        <div id="Register">
+            @using (Html.BeginForm("Register", "Account", FormMethod.Post))
+            {
+                @Html.AntiForgeryToken()
+                <h1>Đăng Kí</h1>
+                <div>
+                    <form id="form">
+                        <div id="Form-01">
+                            @Html.LabelFor(model => model.CustomerName)
+                            @Html.EditorFor(model=>model.CustomerName)
+                            @Html.ValidationMessageFor(model => model.CustomerName)
+
+                        </div>
+                        <div id="Form-02" style="width:100%">
+                            <div class="Form-2" style="width:60%">
+                                @Html.LabelFor(model => model.Email)
+                                @Html.EditorFor(model => model.Email)
+                                @Html.ValidationMessageFor(model => model.Email)
+                            </div>
+                            <div class="Form-2" style="width:40%">
+                                @Html.LabelFor(model => model.CustomerPhone)
+                                @Html.EditorFor(model => model.CustomerPhone)
+                                @Html.ValidationMessageFor(model => model.CustomerPhone)
+                            </div>
+
+                        </div>
+                        <div class="Trangchinh">
+                            @Html.LabelFor(model => model.UserName)
+                            @Html.EditorFor(model => model.UserName)
+                            @Html.ValidationMessageFor(model => model.UserName)
+                        </div>
+                        <div class="Trangchinh">
+                            @Html.LabelFor(model => model.Password)
+                            @Html.EditorFor(model => model.Password)
+                            @Html.ValidationMessageFor(model => model.Password)
+                        </div>
+                        <div class="Trangchinh">
+                            @Html.LabelFor(model => model.ConFirmPassword)
+                            @Html.EditorFor(model => model.ConFirmPassword)
+                            @Html.ValidationMessageFor(model => model.ConFirmPassword)
+                        </div>
+                        <div id="remember">
+                            <label><input type="checkbox" />Nhớ mật khẩu</label>
+                        </div>
+                        <button type="submit" id="btn-register">Đăng kí</button>
+                        <div class="input">
+                            <label for="register">Bạn đã tài khoản?</label>
+                            <a style="color:red" ; href="~/Giohang/Login">Đăng nhập</a>
+                        </div>
+                    </form>
+                </div>
+            }
+        </div>
+    </div>
+
+</body>
+
+
+
+
